@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from factorial_imperative import factorial_imperative
 from factorial_declarative import factorial_declarative
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/factorial_imperative', methods=['GET'])
 def calculate_imperative():
