@@ -1,0 +1,21 @@
+The main function of this app, calculateFactorial, is responsible for calculating the factorial of a user-provided number using both imperative and declarative approaches. Here's a detailed description:
+
+Description of the calculateFactorial Function
+The calculateFactorial function performs the following tasks:
+
+Input Retrieval: It retrieves the user input from an HTML input element with the ID "number", which is expected to be a non-negative integer.
+
+Base URL Definition: It defines the base URL for the Flask server, which serves as the endpoint for fetching factorial results using both approaches.
+
+Fetch Imperative Factorial:
+
+It sends a GET request to the Flask server's /factorial_imperative endpoint, passing the user-provided number as a query parameter.
+Upon receiving the response, it checks if the result is defined and updates the HTML element with the ID "result" to display the factorial calculated using the imperative method. If there's an error, it displays an error message.
+Fetch Declarative Factorial:
+
+Similarly, it sends a GET request to the /factorial_declarative endpoint to calculate the factorial using a declarative approach.
+It processes the response in the same manner, appending the result or an error message to the existing content in the "result" element.
+Asynchronous Handling: The function utilizes Promises to handle the asynchronous nature of the fetch requests, ensuring that the UI remains responsive while waiting for the server's response.
+
+Summary
+In summary, the calculateFactorial function serves as the main interface for users to calculate factorials through both imperative and declarative methods, providing a seamless experience by fetching results from a Flask backend and displaying them in the browser.
